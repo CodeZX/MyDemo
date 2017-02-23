@@ -1,0 +1,3 @@
+target:'Demo' do
+pod 'Masonry'
+end
