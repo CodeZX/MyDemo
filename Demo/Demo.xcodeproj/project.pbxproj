@@ -16,6 +16,8 @@
 		FB0F6FA11E5F2ED9007B845E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0F6F9F1E5F2ED9007B845E /* LaunchScreen.storyboard */; };
 		FB0F6FAC1E5F2ED9007B845E /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FAB1E5F2ED9007B845E /* DemoTests.m */; };
 		FB0F6FB71E5F2ED9007B845E /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FB61E5F2ED9007B845E /* DemoUITests.m */; };
+		FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */; };
+		FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,11 @@
 		FB0F6FB21E5F2ED9007B845E /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0F6FB61E5F2ED9007B845E /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		FB0F6FB81E5F2ED9007B845E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0F6FC41E5F311A007B845E /* CommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
+		FB0F6FC51E5F3129007B845E /* autolayoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolayoutTableViewCell.h; sourceTree = "<group>"; };
+		FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = autolayoutTableViewCell.m; sourceTree = "<group>"; };
+		FB0F6FC81E5F318A007B845E /* MasnoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasnoryTableViewController.h; sourceTree = "<group>"; };
+		FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasnoryTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +134,13 @@
 			children = (
 				FB0F6F941E5F2ED9007B845E /* AppDelegate.h */,
 				FB0F6F951E5F2ED9007B845E /* AppDelegate.m */,
+				FB0F6FC41E5F311A007B845E /* CommonConst.h */,
 				FB0F6F971E5F2ED9007B845E /* ViewController.h */,
 				FB0F6F981E5F2ED9007B845E /* ViewController.m */,
+				FB0F6FC81E5F318A007B845E /* MasnoryTableViewController.h */,
+				FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */,
+				FB0F6FC51E5F3129007B845E /* autolayoutTableViewCell.h */,
+				FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */,
 				FB0F6F9A1E5F2ED9007B845E /* Main.storyboard */,
 				FB0F6F9D1E5F2ED9007B845E /* Assets.xcassets */,
 				FB0F6F9F1E5F2ED9007B845E /* LaunchScreen.storyboard */,
@@ -350,7 +362,9 @@
 			files = (
 				FB0F6F991E5F2ED9007B845E /* ViewController.m in Sources */,
 				FB0F6F961E5F2ED9007B845E /* AppDelegate.m in Sources */,
+				FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */,
 				FB0F6F931E5F2ED9007B845E /* main.m in Sources */,
+				FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +598,7 @@
 				FB0F6FBD1E5F2ED9007B845E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB0F6FBE1E5F2ED9007B845E /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +607,7 @@
 				FB0F6FC01E5F2ED9007B845E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB0F6FC11E5F2ED9007B845E /* Build configuration list for PBXNativeTarget "DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +616,7 @@
 				FB0F6FC31E5F2ED9007B845E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
