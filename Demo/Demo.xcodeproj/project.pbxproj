@@ -18,6 +18,7 @@
 		FB0F6FB71E5F2ED9007B845E /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FB61E5F2ED9007B845E /* DemoUITests.m */; };
 		FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */; };
 		FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */; };
+		FB17283C1E6871CA005CFBD1 /* NSObject+autoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */; };
 		FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = autolayoutTableViewCell.m; sourceTree = "<group>"; };
 		FB0F6FC81E5F318A007B845E /* MasnoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasnoryTableViewController.h; sourceTree = "<group>"; };
 		FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasnoryTableViewController.m; sourceTree = "<group>"; };
+		FB17283A1E6871CA005CFBD1 /* NSObject+autoProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+autoProperty.h"; sourceTree = "<group>"; };
+		FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+autoProperty.m"; sourceTree = "<group>"; };
 		FB72766C1E67E917001E054E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitViewController.h; sourceTree = "<group>"; };
 		FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitViewController.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				FB72766C1E67E917001E054E /* PrefixHeader.pch */,
 				FB0F6F971E5F2ED9007B845E /* ViewController.h */,
 				FB0F6F981E5F2ED9007B845E /* ViewController.m */,
+				FB17283A1E6871CA005CFBD1 /* NSObject+autoProperty.h */,
+				FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */,
 				FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */,
 				FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */,
 				FB0F6FC81E5F318A007B845E /* MasnoryTableViewController.h */,
@@ -372,6 +377,7 @@
 				FB0F6F961E5F2ED9007B845E /* AppDelegate.m in Sources */,
 				FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */,
 				FB0F6F931E5F2ED9007B845E /* main.m in Sources */,
+				FB17283C1E6871CA005CFBD1 /* NSObject+autoProperty.m in Sources */,
 				FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

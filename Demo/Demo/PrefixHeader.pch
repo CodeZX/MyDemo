@@ -25,6 +25,8 @@
 //MessageUI框架：
 #import "BlocksKit+MessageUI.h"
 
+// AFNetworking  网络请求
+#import "AFNetworking.h"
 
 // 自定义的宏定义文件
 #import "CommonConst.h"

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MasnoryTableViewController.h"
 #import "BlocksKitViewController.h"
+#import "NSObject+autoProperty.h"
 
 
 
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+    [self networkRequest];
 }
 
 
@@ -46,6 +48,25 @@
         make.top.equalTo(button.top);
         make.size.equalTo(CGSizeMake(100, 100));
     }];
+}
+
+- (void)networkRequest {
+    
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]init];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [manager GET:@"http://www.weather.com.cn/data/cityinfo/101010100.html" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        NSLog(@"请求成功:%@", responseObject);
+         NSLog(@"请求成功:%@", responseObject[@"weatherinfo"]);
+        NSDictionary *dic = responseObject[@"weatherinfo"];
+        NSLog(@"请求成功:%@", dic[@"temp1"]);
+        [NSObject printPropertyWithDict:responseObject[@"weatherinfo"]];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                       NSLog(@"请求失败:%@", error);
+                    }];
 }
 
 
