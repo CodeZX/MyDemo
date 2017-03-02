@@ -18,6 +18,7 @@
 		FB0F6FB71E5F2ED9007B845E /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FB61E5F2ED9007B845E /* DemoUITests.m */; };
 		FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */; };
 		FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */; };
+		FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,9 @@
 		FB0F6FC61E5F3129007B845E /* autolayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = autolayoutTableViewCell.m; sourceTree = "<group>"; };
 		FB0F6FC81E5F318A007B845E /* MasnoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasnoryTableViewController.h; sourceTree = "<group>"; };
 		FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasnoryTableViewController.m; sourceTree = "<group>"; };
+		FB72766C1E67E917001E054E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitViewController.h; sourceTree = "<group>"; };
+		FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +139,11 @@
 				FB0F6F941E5F2ED9007B845E /* AppDelegate.h */,
 				FB0F6F951E5F2ED9007B845E /* AppDelegate.m */,
 				FB0F6FC41E5F311A007B845E /* CommonConst.h */,
+				FB72766C1E67E917001E054E /* PrefixHeader.pch */,
 				FB0F6F971E5F2ED9007B845E /* ViewController.h */,
 				FB0F6F981E5F2ED9007B845E /* ViewController.m */,
+				FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */,
+				FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */,
 				FB0F6FC81E5F318A007B845E /* MasnoryTableViewController.h */,
 				FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */,
 				FB0F6FC51E5F3129007B845E /* autolayoutTableViewCell.h */,
@@ -361,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0F6F991E5F2ED9007B845E /* ViewController.m in Sources */,
+				FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */,
 				FB0F6F961E5F2ED9007B845E /* AppDelegate.m in Sources */,
 				FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */,
 				FB0F6F931E5F2ED9007B845E /* main.m in Sources */,
@@ -514,10 +522,13 @@
 			baseConfigurationReference = 0E14AEDFCE92737802A972A9 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhouxin.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -526,10 +537,13 @@
 			baseConfigurationReference = 10825152AB626F39FC14FF76 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhouxin.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

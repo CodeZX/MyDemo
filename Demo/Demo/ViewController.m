@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "MasnoryTableViewController.h"
+#import "BlocksKitViewController.h"
 
-#import "CommonConst.h"
+
 
 @interface ViewController ()
 
@@ -30,9 +31,19 @@
     [button setTitle:@"Masonry" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(20);
+        make.size.equalTo(CGSizeMake(100, 100));
+    }];
+    
+    UIButton *button1 = [[UIButton alloc]init];
+    [button1 setBackgroundColor:[UIColor redColor]];
+    [button1 setTitle:@"BlocksKit" forState:UIControlStateNormal];
+    [button1 addTarget:self action:@selector(button1Click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
+    [button1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(button.right).offset(10);
+        make.top.equalTo(button.top);
         make.size.equalTo(CGSizeMake(100, 100));
     }];
 }
@@ -42,6 +53,16 @@
     
     MasnoryTableViewController *vc = [[MasnoryTableViewController alloc]init];
     [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+    
+    
+}
+
+- (void)button1Click {
+    
+    BlocksKitViewController *vc = [[BlocksKitViewController alloc]init];
+             [self presentViewController:vc animated:YES completion:^{
         
     }];
     
