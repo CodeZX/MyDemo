@@ -10,6 +10,7 @@
 #import "MasnoryTableViewController.h"
 #import "BlocksKitViewController.h"
 #import "NSObject+autoProperty.h"
+#import "popViewController.h"
 
 
 
@@ -28,26 +29,66 @@
 
 - (void)setupUI {
     
+    // Masonry
     UIButton *button = [[UIButton alloc]init];
     [button setBackgroundColor:[UIColor redColor]];
     [button setTitle:@"Masonry" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    [button bk_addEventHandler:^(id sender) {
+        
+        MasnoryTableViewController *vc = [[MasnoryTableViewController alloc]init];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+
+    } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(20);
         make.size.equalTo(CGSizeMake(100, 100));
     }];
     
+    // BlocksKit
     UIButton *button1 = [[UIButton alloc]init];
     [button1 setBackgroundColor:[UIColor redColor]];
     [button1 setTitle:@"BlocksKit" forState:UIControlStateNormal];
-    [button1 addTarget:self action:@selector(button1Click) forControlEvents:UIControlEventTouchUpInside];
+    [button1 bk_addEventHandler:^(id sender) {
+        
+        BlocksKitViewController *vc = [[BlocksKitViewController alloc]init];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+
+    } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
     [button1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(button.right).offset(10);
         make.top.equalTo(button.top);
         make.size.equalTo(CGSizeMake(100, 100));
     }];
+    
+    // pop
+    UIButton *button2 = [[UIButton alloc]init];
+    [button2 setBackgroundColor:[UIColor redColor]];
+    [button2 setTitle:@"pop" forState:UIControlStateNormal];
+    [button2 bk_addEventHandler:^(id sender) {
+        
+        popViewController *popVC = [[popViewController alloc]init];
+        [self presentViewController:popVC animated:YES completion:^{
+            
+        }];
+        
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button2];
+    [button2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(button1.right).offset(10);
+        make.top.equalTo(button1.top);
+        make.size.equalTo(CGSizeMake(100, 100));
+    }];
+    
+       
+    
+   
 }
 
 - (void)networkRequest {
@@ -70,25 +111,6 @@
 }
 
 
-- (void)buttonClick {
-    
-    MasnoryTableViewController *vc = [[MasnoryTableViewController alloc]init];
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
-    
-    
-}
-
-- (void)button1Click {
-    
-    BlocksKitViewController *vc = [[BlocksKitViewController alloc]init];
-             [self presentViewController:vc animated:YES completion:^{
-        
-    }];
-    
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

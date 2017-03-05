@@ -30,17 +30,20 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - Masonry (1.0.2)
+  - pop (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking
   - BlocksKit
   - Masonry
+  - pop
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 
-PODFILE CHECKSUM: '0294dc95e2ebbda80d4ce27b9462568f00cb6220'
+PODFILE CHECKSUM: 4452b2b4851a2db326d3b811246239cdbb8c797d
 
 COCOAPODS: 1.2.0

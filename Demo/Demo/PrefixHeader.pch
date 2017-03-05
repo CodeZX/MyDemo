@@ -28,6 +28,10 @@
 // AFNetworking  网络请求
 #import "AFNetworking.h"
 
+
+// Face book的动画引擎
+#import "POP.h"
+
 // 自定义的宏定义文件
 #import "CommonConst.h"
 
