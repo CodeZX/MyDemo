@@ -86,7 +86,11 @@
         make.size.equalTo(CGSizeMake(100, 100));
     }];
     
-       
+    
+    
+    CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:kCATransition];
+    CASpringAnimation *spring = [CASpringAnimation animationWithKeyPath:kCATransition];
+    
     
    
 }

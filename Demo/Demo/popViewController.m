@@ -25,6 +25,25 @@
 }
 
 - (void)setupUI {
+    
+
+    UIView *v = [[UIView alloc]init];
+    v.backgroundColor = RedColor;
+    [self.view addSubview:v];
+    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(Size(100, 100));
+        make.left.top.equalTo(100);
+    }];
+    
+    // 旋转
+    POPBasicAnimation *basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    basic.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    basic.toValue = @(M_PI_4);
+    basic.duration = 5;
+    basic.repeatCount = 1;
+    [v.layer pop_addAnimation:basic forKey:@"11"];
+    
+    
      self.view.backgroundColor = WhiteColor;
     
     
@@ -89,12 +108,12 @@
 //    [self.v pop_addAnimation:basic forKey:@"111"];
     
 //    // 弹簧动画
-//    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-//    spring.fromValue = @(100);
-//    spring.toValue = @(400);
-////    spring.beginTime = CACurrentMediaTime() + 1.0f;
-//    [self.v pop_addAnimation:spring forKey:@"12345"];
-//    
+    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    spring.fromValue = @(100);
+    spring.toValue = @(400);
+//    spring.beginTime = CACurrentMediaTime() + 1.0f;
+    [self.v pop_addAnimation:spring forKey:@"12345"];
+//
 //    // 衰减动画
 //    POPDecayAnimation *decay = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
 //    decay.fromValue = @(100);
