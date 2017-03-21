@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		40ACF38E0CE7287A4CCAE17C /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69480D5C16AA524641F24C03 /* libPods-Demo.a */; };
+		FB0417181E80328300BBC5D4 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0417171E80328300BBC5D4 /* CategoryViewController.m */; };
+		FB04171B1E8032E100BBC5D4 /* UIButton+ZXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04171A1E8032E100BBC5D4 /* UIButton+ZXButton.m */; };
+		FB04171E1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04171D1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.m */; };
 		FB0F6F931E5F2ED9007B845E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6F921E5F2ED9007B845E /* main.m */; };
 		FB0F6F961E5F2ED9007B845E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6F951E5F2ED9007B845E /* AppDelegate.m */; };
 		FB0F6F991E5F2ED9007B845E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6F981E5F2ED9007B845E /* ViewController.m */; };
@@ -44,6 +47,12 @@
 		0E14AEDFCE92737802A972A9 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		10825152AB626F39FC14FF76 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		69480D5C16AA524641F24C03 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0417161E80328300BBC5D4 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		FB0417171E80328300BBC5D4 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		FB0417191E8032E100BBC5D4 /* UIButton+ZXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZXButton.h"; sourceTree = "<group>"; };
+		FB04171A1E8032E100BBC5D4 /* UIButton+ZXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZXButton.m"; sourceTree = "<group>"; };
+		FB04171C1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeLineSpaceAndWordSpace.h"; sourceTree = "<group>"; };
+		FB04171D1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeLineSpaceAndWordSpace.m"; sourceTree = "<group>"; };
 		FB0F6F8E1E5F2ED9007B845E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0F6F921E5F2ED9007B845E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB0F6F941E5F2ED9007B845E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +172,12 @@
 				FB0F6F9F1E5F2ED9007B845E /* LaunchScreen.storyboard */,
 				FB0F6FA21E5F2ED9007B845E /* Info.plist */,
 				FB0F6F911E5F2ED9007B845E /* Supporting Files */,
+				FB0417161E80328300BBC5D4 /* CategoryViewController.h */,
+				FB0417171E80328300BBC5D4 /* CategoryViewController.m */,
+				FB0417191E8032E100BBC5D4 /* UIButton+ZXButton.h */,
+				FB04171A1E8032E100BBC5D4 /* UIButton+ZXButton.m */,
+				FB04171C1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.h */,
+				FB04171D1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -380,8 +395,11 @@
 				FB0F6F991E5F2ED9007B845E /* ViewController.m in Sources */,
 				FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */,
 				FB0F6F961E5F2ED9007B845E /* AppDelegate.m in Sources */,
+				FB04171B1E8032E100BBC5D4 /* UIButton+ZXButton.m in Sources */,
 				FB0F6FC71E5F3129007B845E /* autolayoutTableViewCell.m in Sources */,
+				FB0417181E80328300BBC5D4 /* CategoryViewController.m in Sources */,
 				FB1728431E6BDC5A005CFBD1 /* popViewController.m in Sources */,
+				FB04171E1E8035B800BBC5D4 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				FB0F6F931E5F2ED9007B845E /* main.m in Sources */,
 				FB17283C1E6871CA005CFBD1 /* NSObject+autoProperty.m in Sources */,
 				FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */,

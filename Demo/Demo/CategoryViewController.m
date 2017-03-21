@@ -7,6 +7,7 @@
 //
 
 #import "CategoryViewController.h"
+#import "UIButton+ZXButton.h"
 
 @interface CategoryViewController ()
 
@@ -16,9 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = WhiteColor;
+    UIButton *btn = [UIButton buttonWithTitle:@"12" SelectTitle:nil TitleFont:14 backgroundColor:BlackColor ImageName:nil SelectImageName:nil actionBlock:^(UIButton *button) {
+        NSLog(@"%@",@"按钮点击");
+    }];
+    [self.view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(100);
+        make.size.equalTo(Size(100, 100));
+    }];
 }
-
+    
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

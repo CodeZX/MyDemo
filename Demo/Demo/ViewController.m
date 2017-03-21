@@ -11,6 +11,7 @@
 #import "BlocksKitViewController.h"
 #import "NSObject+autoProperty.h"
 #import "popViewController.h"
+#import "CategoryViewController.h"
 
 
 
@@ -88,8 +89,26 @@
     
     
     
-    CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:kCATransition];
-    CASpringAnimation *spring = [CASpringAnimation animationWithKeyPath:kCATransition];
+    // 常用控件封装
+    UIButton *button3 = [[UIButton alloc]init];
+    [button3 setBackgroundColor:[UIColor redColor]];
+    [button3 setTitle:@"常用控件封装" forState:UIControlStateNormal];
+    [button3 bk_addEventHandler:^(id sender) {
+        
+        CategoryViewController *categoryVC = [[CategoryViewController alloc]init];
+        [self presentViewController:categoryVC animated:YES completion:^{
+            
+        }];
+        
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button3];
+    [button3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(0).offset(10);
+        make.top.equalTo(button1.bottom).offset(20);
+        make.size.equalTo(CGSizeMake(100, 100));
+    }];
+
     
     
    
