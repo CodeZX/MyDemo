@@ -1,6 +1,3 @@
 target:'Demo' do
-    pod 'AFNetworking'
-    pod 'Masonry'
-    pod 'BlocksKit'
-    pod 'pop'
+   
 end
