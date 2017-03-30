@@ -13,6 +13,7 @@
 #import "popViewController.h"
 #import "CategoryViewController.h"
 #import "TFEasyCoderViewController.h"
+#import "myMapViewController.h"
 
 
 
@@ -139,6 +140,30 @@
     
     
    // 难道是我没有提交
+    
+    
+    // 在聘中的 订单准备中 实现demo
+    kdeclare_weakself;
+    [UIButton easyCoder:^(UIButton *ins) {
+        [ins setTitle:@"地图" forState:UIControlStateNormal];
+        ins.backgroundColor = RedColor;
+        ins.titleLabel.font = font(10);
+        [weakSelf.view addSubview:ins];
+        [ins mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.size.equalTo(Size(60, 60));
+            make.left.equalTo(button4.right).offset(20);
+            make.top.equalTo(button4);
+        }];
+        
+        [ins bk_addEventHandler:^(id sender) {
+            
+            myMapViewController *VC = [[myMapViewController alloc]init];
+            [weakSelf presentViewController:VC animated:YES completion:nil];
+            
+        } forControlEvents:UIControlEventTouchUpInside];
+        
+    }];
 }
 
 - (void)networkRequest {

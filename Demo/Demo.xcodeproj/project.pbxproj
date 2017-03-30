@@ -402,6 +402,7 @@
 		FB73EFE91E88EB640046DF35 /* UIWebView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE701E88EB630046DF35 /* UIWebView+TFEasyCoder.m */; };
 		FB73EFEA1E88EB640046DF35 /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */; };
 		FB73EFED1E890D780046DF35 /* zxview.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EFEC1E890D780046DF35 /* zxview.m */; };
+		FBF206C61E8D04A8004589C4 /* myMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF206C51E8D04A8004589C4 /* myMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1225,6 +1226,8 @@
 		FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TFEasyCoder.m"; sourceTree = "<group>"; };
 		FB73EFEB1E890D780046DF35 /* zxview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zxview.h; sourceTree = "<group>"; };
 		FB73EFEC1E890D780046DF35 /* zxview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zxview.m; sourceTree = "<group>"; };
+		FBF206C41E8D04A8004589C4 /* myMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myMapViewController.h; sourceTree = "<group>"; };
+		FBF206C51E8D04A8004589C4 /* myMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1301,6 +1304,8 @@
 				FB72766C1E67E917001E054E /* PrefixHeader.pch */,
 				FB0F6F971E5F2ED9007B845E /* ViewController.h */,
 				FB0F6F981E5F2ED9007B845E /* ViewController.m */,
+				FBF206C41E8D04A8004589C4 /* myMapViewController.h */,
+				FBF206C51E8D04A8004589C4 /* myMapViewController.m */,
 				FB17283A1E6871CA005CFBD1 /* NSObject+autoProperty.h */,
 				FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */,
 				FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */,
@@ -2473,6 +2478,7 @@
 				FB73EE911E88EB630046DF35 /* NSCache+TFEasyCoder.m in Sources */,
 				FB73EF501E88EB640046DF35 /* UIApplicationShortcutIcon+TFEasyCoder.m in Sources */,
 				FB73EF681E88EB640046DF35 /* UIDevice+TFEasyCoder.m in Sources */,
+				FBF206C61E8D04A8004589C4 /* myMapViewController.m in Sources */,
 				FB73EF4E1E88EB640046DF35 /* UIAlertView+TFEasyCoder.m in Sources */,
 				FB73EF691E88EB640046DF35 /* UIDictationPhrase+TFEasyCoder.m in Sources */,
 				FB73EF8E1E88EB640046DF35 /* UIMotionEffect+TFEasyCoder.m in Sources */,
