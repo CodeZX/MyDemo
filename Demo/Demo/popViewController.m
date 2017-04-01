@@ -11,7 +11,7 @@
 @interface popViewController ()
 @property (nonatomic,weak) UIView *v;
 @property (nonatomic,weak) UILabel *lable;
-
+@property (nonatomic,strong) NSLayoutConstraint *constraint;
 
 @end
 
@@ -33,15 +33,21 @@
     [v mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(Size(100, 100));
         make.left.top.equalTo(100);
-    }];
     
-    // 旋转
-    POPBasicAnimation *basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
-    basic.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    basic.toValue = @(M_PI_4);
-    basic.duration = 5;
-    basic.repeatCount = 1;
-    [v.layer pop_addAnimation:basic forKey:@"11"];
+    }];
+    self.v = v;
+   
+    
+    
+//    // 旋转
+//    POPBasicAnimation *basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+//    basic.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+//    basic.toValue = @(M_PI_4);
+//    basic.duration = 5;
+//    basic.repeatCount = 1;
+//    [v.layer pop_addAnimation:basic forKey:@"11"];
+    
+    
     
     
      self.view.backgroundColor = WhiteColor;
@@ -97,7 +103,30 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     
+   
     
+//     POPBasicAnimation *a = [POPBasicAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
+//    
+//    a.toValue = @200;
+//    a.duration = 5.0f;
+//    [self.v   pop_addAnimation:a
+//                               forKey:@"111"];
+    
+    [self.v mas_updateConstraints:^(MASConstraintMaker *make) {
+         make.size.equalTo(Size(200, 200));
+    
+    }];
+    
+//    [UIView animateWithDuration:3 animations:^{
+//        [self.view layoutIfNeeded];
+//    }];
+//    
+    
+    [UIView animateWithDuration:3 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:4 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
     // 基本动画
 //    POPBasicAnimation *basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionX];
 //    basic.fromValue = @(100);
@@ -108,11 +137,11 @@
 //    [self.v pop_addAnimation:basic forKey:@"111"];
     
 //    // 弹簧动画
-    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-    spring.fromValue = @(100);
-    spring.toValue = @(400);
-//    spring.beginTime = CACurrentMediaTime() + 1.0f;
-    [self.v pop_addAnimation:spring forKey:@"12345"];
+//    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+//    spring.fromValue = @(100);
+//    spring.toValue = @(400);
+////    spring.beginTime = CACurrentMediaTime() + 1.0f;
+//    [self.v pop_addAnimation:spring forKey:@"12345"];
 //
 //    // 衰减动画
 //    POPDecayAnimation *decay = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
