@@ -4,14 +4,17 @@
 //
 //  Created by ZX on 2017/3/5.
 //
-//
+//  使用约束的布局的控件  再用pop进行动画时候会有错误  可以使用系统的UIview  动画
+//   如果使用pop实现动画的话最好使用 frame 布局
+
+
 
 #import "popViewController.h"
 
 @interface popViewController ()
 @property (nonatomic,weak) UIView *v;
 @property (nonatomic,weak) UILabel *lable;
-@property (nonatomic,strong) NSLayoutConstraint *constraint;
+@property (nonatomic,strong) MASConstraint *constraint;
 
 @end
 
@@ -25,14 +28,15 @@
 }
 
 - (void)setupUI {
-    
+     self.view.backgroundColor = WhiteColor;
 
     UIView *v = [[UIView alloc]init];
+    v.frame = Frame(100, 100, 100, 100);
     v.backgroundColor = RedColor;
     [self.view addSubview:v];
     [v mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(Size(100, 100));
-        make.left.top.equalTo(100);
+       self.constraint = make.size.equalTo(Size(100, 100));
+          make.left.top.equalTo(100);
     
     }];
     self.v = v;
@@ -47,44 +51,51 @@
 //    basic.repeatCount = 1;
 //    [v.layer pop_addAnimation:basic forKey:@"11"];
     
+//    POPBasicAnimation *basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerSize];
+//    basic.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+//    basic.toValue = [NSValue valueWithCGSize:Size(200, 200)];
+//    basic.duration = 5;
+//    basic.repeatCount = 1;
+//    [v.layer pop_addAnimation:basic forKey:@"11"];
+//
     
     
     
-     self.view.backgroundColor = WhiteColor;
-    
-    
-    UILabel *lable = [[UILabel alloc]init];
-    lable.textColor  = BlackColor;
-    lable.text = @"00:00:00";
-    [self.view addSubview:lable];
-    self.lable = lable;
-    [lable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-//        make.left.top.right.equalTo(0);
-        
-    }];
     
     
     
-    POPAnimatableProperty *prop = [POPAnimatableProperty propertyWithName:@"countdown" initializer:^(POPMutableAnimatableProperty *prop) {
-        prop.writeBlock = ^(id obj, const CGFloat values[]) {
-            UILabel *lable1 = (UILabel*)obj;
-            lable1.text = [NSString stringWithFormat:@"%d:%d:%d",(int)values[0]/60,(int)values[0]%60,(int)(values[0]*100)%100];
-            
-        };
-//                prop.threshold = 0.01f;
-    }];
-    POPBasicAnimation *anBasic = [POPBasicAnimation linearAnimation];  //秒表当然必须是线性的时间函数
-    anBasic.property = prop;    //自定义属性
-    anBasic.fromValue = @(0);  //从0开始
-    anBasic.toValue = @(3*60);  //180秒
-    anBasic.duration = 3*60;    //持续3分钟
-    anBasic.beginTime = CACurrentMediaTime() + 1.0f;    //延迟1秒开始
-    [self.lable pop_addAnimation:anBasic forKey:@"countdown"];
-    
-    
-    
-   
+//    UILabel *lable = [[UILabel alloc]init];
+//    lable.textColor  = BlackColor;
+//    lable.text = @"00:00:00";
+//    [self.view addSubview:lable];
+//    self.lable = lable;
+//    [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self.view);
+////        make.left.top.right.equalTo(0);
+//        
+//    }];
+//    
+//    
+//    
+//    POPAnimatableProperty *prop = [POPAnimatableProperty propertyWithName:@"countdown" initializer:^(POPMutableAnimatableProperty *prop) {
+//        prop.writeBlock = ^(id obj, const CGFloat values[]) {
+//            UILabel *lable1 = (UILabel*)obj;
+//            lable1.text = [NSString stringWithFormat:@"%d:%d:%d",(int)values[0]/60,(int)values[0]%60,(int)(values[0]*100)%100];
+//            
+//        };
+////                prop.threshold = 0.01f;
+//    }];
+//    POPBasicAnimation *anBasic = [POPBasicAnimation linearAnimation];  //秒表当然必须是线性的时间函数
+//    anBasic.property = prop;    //自定义属性
+//    anBasic.fromValue = @(0);  //从0开始
+//    anBasic.toValue = @(3*60);  //180秒
+//    anBasic.duration = 3*60;    //持续3分钟
+//    anBasic.beginTime = CACurrentMediaTime() + 1.0f;    //延迟1秒开始
+//    [self.lable pop_addAnimation:anBasic forKey:@"countdown"];
+//    
+//    
+//    
+//   
     
 //    UIView *v = [[UIView alloc]init];
 //    v.backgroundColor = RedColor;
@@ -103,30 +114,65 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     
+//    self.constraint.offset(200);
+    
+//    [self.v mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.size.equalTo(Size(200, 200));
+//    }];
+    
+        POPAnimatableProperty *prop = [POPAnimatableProperty propertyWithName:@"countdown" initializer:^(POPMutableAnimatableProperty *prop) {
+            prop.writeBlock = ^(id obj, const CGFloat values[]) {
+//                UILabel *lable1 = (UILabel*)obj;
+//                lable1.text = [NSString stringWithFormat:@"%d:%d:%d",(int)values[0]/60,(int)values[0]%60,(int)(values[0]*100)%100];
+      
+                UIView *myview = (UIView *)obj;
+                CGFloat off = values[0];
+                self.constraint.offset(off);
+                
+            
+            };
+    //                prop.threshold = 0.01f;
+        }];
+        POPBasicAnimation *anBasic = [POPBasicAnimation linearAnimation];  //秒表当然必须是线性的时间函数
+        anBasic.property = prop;    //自定义属性
+        anBasic.fromValue = @(0);  //从0开始
+    anBasic.toValue = @300;  //180秒
+        anBasic.duration = 3;    //持续3分钟
+        anBasic.beginTime = CACurrentMediaTime() + 1.0f;    //延迟1秒开始
+        [self.v pop_addAnimation:anBasic forKey:@"countdown"];
+        
+        
+
+    
    
     
-//     POPBasicAnimation *a = [POPBasicAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
-//    
-//    a.toValue = @200;
-//    a.duration = 5.0f;
-//    [self.v   pop_addAnimation:a
+//    POPBasicAnimation *a = [POPBasicAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
+//
+//    a.toValue = [NSValue valueWithCGSize:CGSizeMake(200, 200)];
+//    a.duration = 2.0f;
+//    a.completionBlock = ^(POPAnimation *animation,BOOL zhouong) {
+////        [self.v layoutIfNeeded];
+//        
+//        NSLog(@"%f",self.v.frame.size.width);
+//    };
+//    [self.v.layer pop_addAnimation:a
 //                               forKey:@"111"];
     
-    [self.v mas_updateConstraints:^(MASConstraintMaker *make) {
-         make.size.equalTo(Size(200, 200));
-    
-    }];
+//    [self.v mas_updateConstraints:^(MASConstraintMaker *make) {
+//         make.size.equalTo(Size(200, 200));
+//    
+//    }];
     
 //    [UIView animateWithDuration:3 animations:^{
 //        [self.view layoutIfNeeded];
 //    }];
 //    
     
-    [UIView animateWithDuration:3 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:4 options:UIViewAnimationOptionTransitionNone animations:^{
-        [self.view layoutIfNeeded];
-    } completion:^(BOOL finished) {
-        
-    }];
+//    [UIView animateWithDuration:3 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:4 options:UIViewAnimationOptionTransitionNone animations:^{
+//        [self.view layoutIfNeeded];
+//    } completion:^(BOOL finished) {
+//        
+//    }];
     // 基本动画
 //    POPBasicAnimation *basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionX];
 //    basic.fromValue = @(100);

@@ -198,6 +198,8 @@
     
     [self.detailedView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.top).offset(Y);
+        
+    
     }];
     
     [UIView animateWithDuration:0.3 animations:^{
