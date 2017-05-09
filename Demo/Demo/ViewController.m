@@ -17,7 +17,10 @@
 
 
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,weak)UITableView *tableView;
+@property (nonatomic,strong) NSDictionary *keyofControllerdict;
 
 @end
 
@@ -25,10 +28,78 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupUI];
-    [self networkRequest];
+//    [self setupUI];
+//    [self networkRequest];
+    
+    [self setup];
 }
 
+
+- (void)setup {
+    
+    UITableView *tableView = [[UITableView alloc]init];
+    tableView.delegate  = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+    self.tableView = tableView;
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(0);
+    }];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [self.keyofControllerdict allKeys].count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;     {
+    
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    NSArray *keyArray = [self.keyofControllerdict allKeys];
+    cell.textLabel.text = keyArray[indexPath.row];
+    
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+   
+    NSArray *classArray = [self.keyofControllerdict allValues];
+    NSString *classSring  =classArray[indexPath.row];
+    
+    id VC  = [[NSClassFromString(classSring)  alloc]init];
+    [self presentViewController:VC animated:YES completion:^{
+        
+    }];
+    
+    
+}
+
+- (NSDictionary *)keyofControllerdict {
+    
+    if (!_keyofControllerdict) {
+        
+        _keyofControllerdict = @{@"Masonry":@"MasnoryTableViewController",
+                                 @"BlocksKit":@"BlocksKitViewController",
+                                 @"pop":@"popViewController",
+                                 @"控件封装":@"CategoryViewController",
+                                 @"TFEasyCoder":@"TFEasyCoderViewController"
+                                 
+                                 };
+    }
+    
+    return _keyofControllerdict;
+}
 
 - (void)setupUI {
     
@@ -191,5 +262,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (NSString *)debugDescription
+{
+    return [NSString stringWithFormat:@"<%@: %p> ", [self class], self];
+}
 
 @end
