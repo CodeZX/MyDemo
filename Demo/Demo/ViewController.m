@@ -37,6 +37,8 @@
 
 - (void)setup {
     
+//    self.title =@"dome";
+    self.navigationItem.title = @"dome";
     UITableView *tableView = [[UITableView alloc]init];
     tableView.delegate  = self;
     tableView.dataSource = self;
@@ -78,11 +80,11 @@
     NSString *classSring  =classArray[indexPath.row];
     
     id VC  = [[NSClassFromString(classSring)  alloc]init];
-    [self presentViewController:VC animated:YES completion:^{
-        
-    }];
+//    [self presentViewController:VC animated:YES completion:^{
     
+//    }];
     
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (NSDictionary *)keyofControllerdict {
@@ -245,8 +247,8 @@
     [manager GET:@"http://www.weather.com.cn/data/cityinfo/101010100.html" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        NSLog(@"请求成功:%@", responseObject);
-         NSLog(@"请求成功:%@", responseObject[@"weatherinfo"]);
+       NSLog(@"请求成功:%@", responseObject);
+       NSLog(@"请求成功:%@", responseObject[@"weatherinfo"]);
         NSDictionary *dic = responseObject[@"weatherinfo"];
         NSLog(@"请求成功:%@", dic[@"temp1"]);
         [NSObject printPropertyWithDict:responseObject[@"weatherinfo"]];
