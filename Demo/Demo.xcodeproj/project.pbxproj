@@ -402,6 +402,7 @@
 		FB73EFE91E88EB640046DF35 /* UIWebView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE701E88EB630046DF35 /* UIWebView+TFEasyCoder.m */; };
 		FB73EFEA1E88EB640046DF35 /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */; };
 		FB73EFED1E890D780046DF35 /* zxview.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EFEC1E890D780046DF35 /* zxview.m */; };
+		FBBBF73F1EC5991100E0A41B /* BaidumapViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */; };
 		FBF206C61E8D04A8004589C4 /* myMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF206C51E8D04A8004589C4 /* myMapViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -1226,6 +1227,8 @@
 		FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TFEasyCoder.m"; sourceTree = "<group>"; };
 		FB73EFEB1E890D780046DF35 /* zxview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zxview.h; sourceTree = "<group>"; };
 		FB73EFEC1E890D780046DF35 /* zxview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zxview.m; sourceTree = "<group>"; };
+		FBBBF73D1EC5991000E0A41B /* BaidumapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaidumapViewController.h; sourceTree = "<group>"; };
+		FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaidumapViewController.mm; sourceTree = "<group>"; };
 		FBF206C41E8D04A8004589C4 /* myMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myMapViewController.h; sourceTree = "<group>"; };
 		FBF206C51E8D04A8004589C4 /* myMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1298,6 +1301,7 @@
 		FB0F6F901E5F2ED9007B845E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FBBBF7401EC5993A00E0A41B /* Class */,
 				FB0F6F941E5F2ED9007B845E /* AppDelegate.h */,
 				FB0F6F951E5F2ED9007B845E /* AppDelegate.m */,
 				FB0F6FC41E5F311A007B845E /* CommonConst.h */,
@@ -1320,6 +1324,8 @@
 				FB73EB711E88E6C80046DF35 /* TFEasyCoderViewController.m */,
 				FB73EFEB1E890D780046DF35 /* zxview.h */,
 				FB73EFEC1E890D780046DF35 /* zxview.m */,
+				FBBBF73D1EC5991000E0A41B /* BaidumapViewController.h */,
+				FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */,
 				FB0F6F9A1E5F2ED9007B845E /* Main.storyboard */,
 				FB0F6F9D1E5F2ED9007B845E /* Assets.xcassets */,
 				FB0F6F9F1E5F2ED9007B845E /* LaunchScreen.storyboard */,
@@ -2163,6 +2169,13 @@
 			path = "uikit(168)";
 			sourceTree = "<group>";
 		};
+		FBBBF7401EC5993A00E0A41B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2233,6 +2246,7 @@
 				TargetAttributes = {
 					FB0F6F8D1E5F2ED9007B845E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 484G6WE6BR;
 						ProvisioningStyle = Automatic;
 					};
 					FB0F6FA61E5F2ED9007B845E = {
@@ -2457,6 +2471,7 @@
 				FB73EF781E88EB640046DF35 /* UIFontDescriptor+TFEasyCoder.m in Sources */,
 				FB73EF541E88EB640046DF35 /* UIBarButtonItemGroup+TFEasyCoder.m in Sources */,
 				FB73EF801E88EB640046DF35 /* UIInputViewController+TFEasyCoder.m in Sources */,
+				FBBBF73F1EC5991100E0A41B /* BaidumapViewController.mm in Sources */,
 				FB73EF431E88EB630046DF35 /* UIAcceleration+TFEasyCoder.m in Sources */,
 				FB73EEB51E88EB630046DF35 /* NSFileVersion+TFEasyCoder.m in Sources */,
 				FB73EEF41E88EB630046DF35 /* NSPointerFunctions+TFEasyCoder.m in Sources */,
@@ -2886,6 +2901,7 @@
 			baseConfigurationReference = 0E14AEDFCE92737802A972A9 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 484G6WE6BR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -2901,6 +2917,7 @@
 			baseConfigurationReference = 10825152AB626F39FC14FF76 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 484G6WE6BR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo/Info.plist;

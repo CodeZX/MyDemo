@@ -3,5 +3,5 @@ target:'Demo' do
     pod 'Masonry'
     pod 'BlocksKit'
     pod 'pop'
-    
+   pod 'BaiduMapKit' 
 end

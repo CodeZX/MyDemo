@@ -95,8 +95,8 @@
                                  @"BlocksKit":@"BlocksKitViewController",
                                  @"pop":@"popViewController",
                                  @"控件封装":@"CategoryViewController",
-                                 @"TFEasyCoder":@"TFEasyCoderViewController"
-                                 
+                                 @"TFEasyCoder":@"TFEasyCoderViewController",
+                                 @"百度地图":@"BaidumapViewController"
                                  };
     }
     
