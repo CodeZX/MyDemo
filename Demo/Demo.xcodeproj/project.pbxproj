@@ -402,6 +402,7 @@
 		FB73EFE91E88EB640046DF35 /* UIWebView+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE701E88EB630046DF35 /* UIWebView+TFEasyCoder.m */; };
 		FB73EFEA1E88EB640046DF35 /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */; };
 		FB73EFED1E890D780046DF35 /* zxview.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EFEC1E890D780046DF35 /* zxview.m */; };
+		FBBB77AD1EC9AD6800983401 /* NewWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBB77AC1EC9AD6800983401 /* NewWindowViewController.m */; };
 		FBBBF73F1EC5991100E0A41B /* BaidumapViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */; };
 		FBF206C61E8D04A8004589C4 /* myMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF206C51E8D04A8004589C4 /* myMapViewController.m */; };
 /* End PBXBuildFile section */
@@ -1227,6 +1228,8 @@
 		FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TFEasyCoder.m"; sourceTree = "<group>"; };
 		FB73EFEB1E890D780046DF35 /* zxview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zxview.h; sourceTree = "<group>"; };
 		FB73EFEC1E890D780046DF35 /* zxview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zxview.m; sourceTree = "<group>"; };
+		FBBB77AB1EC9AD6800983401 /* NewWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWindowViewController.h; sourceTree = "<group>"; };
+		FBBB77AC1EC9AD6800983401 /* NewWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWindowViewController.m; sourceTree = "<group>"; };
 		FBBBF73D1EC5991000E0A41B /* BaidumapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaidumapViewController.h; sourceTree = "<group>"; };
 		FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaidumapViewController.mm; sourceTree = "<group>"; };
 		FBF206C41E8D04A8004589C4 /* myMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myMapViewController.h; sourceTree = "<group>"; };
@@ -2172,6 +2175,8 @@
 		FBBBF7401EC5993A00E0A41B /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FBBB77AB1EC9AD6800983401 /* NewWindowViewController.h */,
+				FBBB77AC1EC9AD6800983401 /* NewWindowViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -2662,6 +2667,7 @@
 				FB73EE921E88EB630046DF35 /* NSCachedURLResponse+TFEasyCoder.m in Sources */,
 				FB73EF621E88EB640046DF35 /* UICollectionViewTransitionLayout+TFEasyCoder.m in Sources */,
 				FB73EFCC1E88EB640046DF35 /* UITableView+TFEasyCoder.m in Sources */,
+				FBBB77AD1EC9AD6800983401 /* NewWindowViewController.m in Sources */,
 				FB73EEBB1E88EB630046DF35 /* NSHTTPURLResponse+TFEasyCoder.m in Sources */,
 				FB73EF021E88EB630046DF35 /* NSSimpleCString+TFEasyCoder.m in Sources */,
 				FB73EFDF1E88EB640046DF35 /* UIUserNotificationAction+TFEasyCoder.m in Sources */,

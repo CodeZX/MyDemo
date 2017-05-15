@@ -96,7 +96,8 @@
                                  @"pop":@"popViewController",
                                  @"控件封装":@"CategoryViewController",
                                  @"TFEasyCoder":@"TFEasyCoderViewController",
-                                 @"百度地图":@"BaidumapViewController"
+                                 @"百度地图":@"BaidumapViewController",
+                                 @"window":@"NewWindowViewController"
                                  };
     }
     
