@@ -97,7 +97,9 @@
                                  @"控件封装":@"CategoryViewController",
                                  @"TFEasyCoder":@"TFEasyCoderViewController",
                                  @"百度地图":@"BaidumapViewController",
-                                 @"window":@"NewWindowViewController"
+                                 @"window":@"NewWindowViewController",
+                                 @"UserNotifications":@"UserNotificationsViewController",
+                                 @"本地通知":@"LocalNotificationViewController"
                                  };
     }
     

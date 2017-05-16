@@ -403,6 +403,9 @@
 		FB73EFEA1E88EB640046DF35 /* UIWindow+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EE721E88EB630046DF35 /* UIWindow+TFEasyCoder.m */; };
 		FB73EFED1E890D780046DF35 /* zxview.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EFEC1E890D780046DF35 /* zxview.m */; };
 		FBBB77AD1EC9AD6800983401 /* NewWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBB77AC1EC9AD6800983401 /* NewWindowViewController.m */; };
+		FBBB77B01ECADB7800983401 /* UserNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBB77AF1ECADB7800983401 /* UserNotificationsViewController.m */; };
+		FBBB77B21ECAE00700983401 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBB77B11ECAE00700983401 /* UserNotifications.framework */; };
+		FBBB77B61ECAEEC100983401 /* LocalNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBB77B51ECAEEC100983401 /* LocalNotificationViewController.m */; };
 		FBBBF73F1EC5991100E0A41B /* BaidumapViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */; };
 		FBF206C61E8D04A8004589C4 /* myMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF206C51E8D04A8004589C4 /* myMapViewController.m */; };
 /* End PBXBuildFile section */
@@ -1230,6 +1233,12 @@
 		FB73EFEC1E890D780046DF35 /* zxview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zxview.m; sourceTree = "<group>"; };
 		FBBB77AB1EC9AD6800983401 /* NewWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWindowViewController.h; sourceTree = "<group>"; };
 		FBBB77AC1EC9AD6800983401 /* NewWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWindowViewController.m; sourceTree = "<group>"; };
+		FBBB77AE1ECADB7800983401 /* UserNotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNotificationsViewController.h; sourceTree = "<group>"; };
+		FBBB77AF1ECADB7800983401 /* UserNotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNotificationsViewController.m; sourceTree = "<group>"; };
+		FBBB77B11ECAE00700983401 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		FBBB77B31ECAE5DD00983401 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
+		FBBB77B41ECAEEC100983401 /* LocalNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotificationViewController.h; sourceTree = "<group>"; };
+		FBBB77B51ECAEEC100983401 /* LocalNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationViewController.m; sourceTree = "<group>"; };
 		FBBBF73D1EC5991000E0A41B /* BaidumapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaidumapViewController.h; sourceTree = "<group>"; };
 		FBBBF73E1EC5991100E0A41B /* BaidumapViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaidumapViewController.mm; sourceTree = "<group>"; };
 		FBF206C41E8D04A8004589C4 /* myMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myMapViewController.h; sourceTree = "<group>"; };
@@ -1241,6 +1250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBB77B21ECAE00700983401 /* UserNotifications.framework in Frameworks */,
 				40ACF38E0CE7287A4CCAE17C /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1274,6 +1284,7 @@
 		518BECFA24C620ED5AEE2E57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FBBB77B11ECAE00700983401 /* UserNotifications.framework */,
 				69480D5C16AA524641F24C03 /* libPods-Demo.a */,
 			);
 			name = Frameworks;
@@ -1304,6 +1315,7 @@
 		FB0F6F901E5F2ED9007B845E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FBBB77B31ECAE5DD00983401 /* Demo.entitlements */,
 				FBBBF7401EC5993A00E0A41B /* Class */,
 				FB0F6F941E5F2ED9007B845E /* AppDelegate.h */,
 				FB0F6F951E5F2ED9007B845E /* AppDelegate.m */,
@@ -2177,6 +2189,10 @@
 			children = (
 				FBBB77AB1EC9AD6800983401 /* NewWindowViewController.h */,
 				FBBB77AC1EC9AD6800983401 /* NewWindowViewController.m */,
+				FBBB77AE1ECADB7800983401 /* UserNotificationsViewController.h */,
+				FBBB77AF1ECADB7800983401 /* UserNotificationsViewController.m */,
+				FBBB77B41ECAEEC100983401 /* LocalNotificationViewController.h */,
+				FBBB77B51ECAEEC100983401 /* LocalNotificationViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -2253,6 +2269,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 484G6WE6BR;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					FB0F6FA61E5F2ED9007B845E = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -2401,6 +2422,7 @@
 				FB73EEB81E88EB630046DF35 /* NSHashTable+TFEasyCoder.m in Sources */,
 				FB73EFB51E88EB640046DF35 /* UIScreenEdgePanGestureRecognizer+TFEasyCoder.m in Sources */,
 				FB73EE881E88EB630046DF35 /* CATransition+TFEasyCoder.m in Sources */,
+				FBBB77B61ECAEEC100983401 /* LocalNotificationViewController.m in Sources */,
 				FB73EF821E88EB640046DF35 /* UIKeyCommand+TFEasyCoder.m in Sources */,
 				FB73EF631E88EB640046DF35 /* UICollectionViewUpdateItem+TFEasyCoder.m in Sources */,
 				FB73EF7A1E88EB640046DF35 /* UIGravityBehavior+TFEasyCoder.m in Sources */,
@@ -2569,6 +2591,7 @@
 				FB73EEBA1E88EB630046DF35 /* NSHTTPCookieStorage+TFEasyCoder.m in Sources */,
 				FB73EF571E88EB640046DF35 /* UIBlurEffect+TFEasyCoder.m in Sources */,
 				FB73EF131E88EB630046DF35 /* NSURLCache+TFEasyCoder.m in Sources */,
+				FBBB77B01ECADB7800983401 /* UserNotificationsViewController.m in Sources */,
 				FB73EFEA1E88EB640046DF35 /* UIWindow+TFEasyCoder.m in Sources */,
 				FB73EFC81E88EB640046DF35 /* UISwitch+TFEasyCoder.m in Sources */,
 				FB73EEB31E88EB630046DF35 /* NSFileProviderExtension+TFEasyCoder.m in Sources */,
@@ -2907,6 +2930,7 @@
 			baseConfigurationReference = 0E14AEDFCE92737802A972A9 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
 				DEVELOPMENT_TEAM = 484G6WE6BR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/Demo/PrefixHeader.pch";
@@ -2923,6 +2947,7 @@
 			baseConfigurationReference = 10825152AB626F39FC14FF76 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
 				DEVELOPMENT_TEAM = 484G6WE6BR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/Demo/PrefixHeader.pch";
