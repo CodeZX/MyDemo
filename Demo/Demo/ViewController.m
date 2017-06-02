@@ -99,7 +99,9 @@
                                  @"百度地图":@"BaidumapViewController",
                                  @"window":@"NewWindowViewController",
                                  @"UserNotifications":@"UserNotificationsViewController",
-                                 @"本地通知":@"LocalNotificationViewController"
+                                 @"本地通知":@"LocalNotificationViewController",
+                                 @"UserCenter":@"UserCenterViewController"
+                                 
                                  };
     }
     

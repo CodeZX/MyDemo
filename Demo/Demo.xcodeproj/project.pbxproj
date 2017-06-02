@@ -23,6 +23,7 @@
 		FB0F6FCA1E5F318A007B845E /* MasnoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6FC91E5F318A007B845E /* MasnoryTableViewController.m */; };
 		FB17283C1E6871CA005CFBD1 /* NSObject+autoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */; };
 		FB1728431E6BDC5A005CFBD1 /* popViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1728421E6BDC5A005CFBD1 /* popViewController.m */; };
+		FB3266FD1EE1117700857482 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3266FC1EE1117700857482 /* UserCenterViewController.m */; };
 		FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */; };
 		FB73EB721E88E6C80046DF35 /* TFEasyCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EB711E88E6C80046DF35 /* TFEasyCoderViewController.m */; };
 		FB73EE731E88EB630046DF35 /* CAAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EB771E88EB600046DF35 /* CAAnimation+TFEasyCoder.m */; };
@@ -462,6 +463,8 @@
 		FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+autoProperty.m"; sourceTree = "<group>"; };
 		FB1728411E6BDC5A005CFBD1 /* popViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popViewController.h; sourceTree = "<group>"; };
 		FB1728421E6BDC5A005CFBD1 /* popViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popViewController.m; sourceTree = "<group>"; };
+		FB3266FB1EE1117700857482 /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		FB3266FC1EE1117700857482 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		FB72766C1E67E917001E054E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitViewController.h; sourceTree = "<group>"; };
 		FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitViewController.m; sourceTree = "<group>"; };
@@ -2193,6 +2196,8 @@
 				FBBB77AF1ECADB7800983401 /* UserNotificationsViewController.m */,
 				FBBB77B41ECAEEC100983401 /* LocalNotificationViewController.h */,
 				FBBB77B51ECAEEC100983401 /* LocalNotificationViewController.m */,
+				FB3266FB1EE1117700857482 /* UserCenterViewController.h */,
+				FB3266FC1EE1117700857482 /* UserCenterViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -2675,6 +2680,7 @@
 				FB73EF0A1E88EB630046DF35 /* NSTextStorage+TFEasyCoder.m in Sources */,
 				FB73EF451E88EB630046DF35 /* UIAccessibilityCustomAction+TFEasyCoder.m in Sources */,
 				FB73EE751E88EB630046DF35 /* CABasicAnimation+TFEasyCoder.m in Sources */,
+				FB3266FD1EE1117700857482 /* UserCenterViewController.m in Sources */,
 				FB73EFCF1E88EB640046DF35 /* UITableViewFocusUpdateContext+TFEasyCoder.m in Sources */,
 				FB73EE831E88EB630046DF35 /* CASpringAnimation+TFEasyCoder.m in Sources */,
 				FB73EF331E88EB630046DF35 /* NSMutableDictionary+TFKit.m in Sources */,
