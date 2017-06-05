@@ -7,6 +7,8 @@
 //
 
 #import "UserCenterViewController.h"
+#import "AccountManager.h"
+#import "AccountInfoModel.h"
 
 @interface UserCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -24,13 +26,28 @@
     
 
     [self setupUI];
+    [self userInfoLogin];
 }
 
 
+- (void)userInfoLogin {
+    
+    
+    AccountInfoModel *userInfo = [[AccountInfoModel alloc]init];
+    userInfo.uid = @"1";
+    userInfo.token = @"11111111";
+    userInfo.nickname = @"jack";
+    userInfo.login = YES;
+    
+    [AccountManager save:userInfo];
+    
+    
+}
+
 - (void)setupUI  {
     
-    self.navigationController.title = @"个人中心";
-    self.view.backgroundColor = RedColor;
+    self.title = @"个人中心";
+    self.view.backgroundColor = WhiteColor;
     
     UIImageView *imgHead = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"8250.jpg_wh300"]];
     [self.view addSubview:imgHead];
@@ -70,7 +87,18 @@
     
     
     
-    
+    UIButton *quitBtn = [[UIButton alloc]init];
+    [quitBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+    quitBtn.backgroundColor = BlackColor;
+    [self.view addSubview:quitBtn];
+    [quitBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.left.bottom.equalTo(self.view);
+        make.height.equalTo(44);
+    }];
+    [quitBtn bk_addEventHandler:^(id sender) {
+        
+        [AccountManager userLogout];
+    } forControlEvents:UIControlEventTouchUpInside];
     
     
     
@@ -171,60 +199,22 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
     if (!cell) {
         
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"reuseIdentifier"];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"reuseIdentifier"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; //显示最右边的箭头
     }
     
     cell.textLabel.text = self.Sourcedata[indexPath.row];
-    cell.backgroundColor = BlackColor;
+//    cell.backgroundColor = BlackColor;
     
-    
+//    UITableViewCellAccessoryNone,                                                      // don't show any accessory view
+//    UITableViewCellAccessoryDisclosureIndicator,                                       // regular chevron. doesn't track
+//    UITableViewCellAccessoryDetailDisclosureButton __TVOS_PROHIBITED,                 // info button w/ chevron. tracks
+//    UITableViewCellAccessoryCheckmark,                                                 // checkmark. doesn't track
+//    UITableViewCellAccessoryDetailButton
     
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -31,6 +31,7 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - Masonry (1.0.2)
+  - MJExtension (3.0.13)
   - pop (1.0.9)
 
 DEPENDENCIES:
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - BaiduMapKit
   - BlocksKit
   - Masonry
+  - MJExtension
   - pop
 
 SPEC CHECKSUMS:
@@ -45,8 +47,9 @@ SPEC CHECKSUMS:
   BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 
-PODFILE CHECKSUM: ca4d48946e3b2ef434bae63e38672b1156cbe0a1
+PODFILE CHECKSUM: 8f0861526ce1c78e5a4d096fce8ad3e67b43fb59
 
 COCOAPODS: 1.2.0

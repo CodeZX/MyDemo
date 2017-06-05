@@ -3,5 +3,6 @@ target:'Demo' do
     pod 'Masonry'
     pod 'BlocksKit'
     pod 'pop'
-   pod 'BaiduMapKit' 
+   pod 'BaiduMapKit'
+   pod 'MJExtension'
 end

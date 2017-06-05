@@ -24,6 +24,8 @@
 		FB17283C1E6871CA005CFBD1 /* NSObject+autoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17283B1E6871CA005CFBD1 /* NSObject+autoProperty.m */; };
 		FB1728431E6BDC5A005CFBD1 /* popViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1728421E6BDC5A005CFBD1 /* popViewController.m */; };
 		FB3266FD1EE1117700857482 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3266FC1EE1117700857482 /* UserCenterViewController.m */; };
+		FB3267001EE529A900857482 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3266FF1EE529A900857482 /* AccountManager.m */; };
+		FB3267031EE529CF00857482 /* AccountInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3267021EE529CF00857482 /* AccountInfoModel.m */; };
 		FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */; };
 		FB73EB721E88E6C80046DF35 /* TFEasyCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EB711E88E6C80046DF35 /* TFEasyCoderViewController.m */; };
 		FB73EE731E88EB630046DF35 /* CAAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EB771E88EB600046DF35 /* CAAnimation+TFEasyCoder.m */; };
@@ -465,6 +467,10 @@
 		FB1728421E6BDC5A005CFBD1 /* popViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popViewController.m; sourceTree = "<group>"; };
 		FB3266FB1EE1117700857482 /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		FB3266FC1EE1117700857482 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		FB3266FE1EE529A900857482 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		FB3266FF1EE529A900857482 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		FB3267011EE529CF00857482 /* AccountInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfoModel.h; sourceTree = "<group>"; };
+		FB3267021EE529CF00857482 /* AccountInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfoModel.m; sourceTree = "<group>"; };
 		FB72766C1E67E917001E054E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitViewController.h; sourceTree = "<group>"; };
 		FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitViewController.m; sourceTree = "<group>"; };
@@ -2198,6 +2204,10 @@
 				FBBB77B51ECAEEC100983401 /* LocalNotificationViewController.m */,
 				FB3266FB1EE1117700857482 /* UserCenterViewController.h */,
 				FB3266FC1EE1117700857482 /* UserCenterViewController.m */,
+				FB3266FE1EE529A900857482 /* AccountManager.h */,
+				FB3266FF1EE529A900857482 /* AccountManager.m */,
+				FB3267011EE529CF00857482 /* AccountInfoModel.h */,
+				FB3267021EE529CF00857482 /* AccountInfoModel.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -2610,6 +2620,7 @@
 				FB73EF921E88EB640046DF35 /* UIMutableUserNotificationCategory+TFEasyCoder.m in Sources */,
 				FB73EE731E88EB630046DF35 /* CAAnimation+TFEasyCoder.m in Sources */,
 				FB73EFBE1E88EB640046DF35 /* UISlider+TFEasyCoder.m in Sources */,
+				FB3267031EE529CF00857482 /* AccountInfoModel.m in Sources */,
 				FB73EECC1E88EB630046DF35 /* NSLinguisticTagger+TFEasyCoder.m in Sources */,
 				FB0417181E80328300BBC5D4 /* CategoryViewController.m in Sources */,
 				FB73EF8A1E88EB640046DF35 /* UIManagedDocument+TFEasyCoder.m in Sources */,
@@ -2715,6 +2726,7 @@
 				FB73EFA91E88EB640046DF35 /* UIPrintInfo+TFEasyCoder.m in Sources */,
 				FB73EEED1E88EB630046DF35 /* NSOrthography+TFEasyCoder.m in Sources */,
 				FB73EF931E88EB640046DF35 /* UINavigationBar+TFEasyCoder.m in Sources */,
+				FB3267001EE529A900857482 /* AccountManager.m in Sources */,
 				FB73EEBF1E88EB630046DF35 /* NSInvocation+TFEasyCoder.m in Sources */,
 				FB73EF8B1E88EB640046DF35 /* UIMarkupTextPrintFormatter+TFEasyCoder.m in Sources */,
 				FB73EF591E88EB640046DF35 /* UICollectionReusableView+TFEasyCoder.m in Sources */,
