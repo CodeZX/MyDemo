@@ -100,8 +100,9 @@
                                  @"window":@"NewWindowViewController",
                                  @"UserNotifications":@"UserNotificationsViewController",
                                  @"本地通知":@"LocalNotificationViewController",
-                                 @"UserCenter":@"UserCenterViewController"
-                                 
+                                 @"UserCenter":@"UserCenterViewController",
+                                 @"moveTableView":@"TableViewMoveViewController"
+
                                  };
     }
     

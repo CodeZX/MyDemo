@@ -26,6 +26,7 @@
 		FB3266FD1EE1117700857482 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3266FC1EE1117700857482 /* UserCenterViewController.m */; };
 		FB3267001EE529A900857482 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3266FF1EE529A900857482 /* AccountManager.m */; };
 		FB3267031EE529CF00857482 /* AccountInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3267021EE529CF00857482 /* AccountInfoModel.m */; };
+		FB48C8891F417F1800E294D3 /* TableViewMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB48C8881F417F1800E294D3 /* TableViewMoveViewController.m */; };
 		FB72766F1E67F0DF001E054E /* BlocksKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */; };
 		FB73EB721E88E6C80046DF35 /* TFEasyCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EB711E88E6C80046DF35 /* TFEasyCoderViewController.m */; };
 		FB73EE731E88EB630046DF35 /* CAAnimation+TFEasyCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FB73EB771E88EB600046DF35 /* CAAnimation+TFEasyCoder.m */; };
@@ -471,6 +472,8 @@
 		FB3266FF1EE529A900857482 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		FB3267011EE529CF00857482 /* AccountInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfoModel.h; sourceTree = "<group>"; };
 		FB3267021EE529CF00857482 /* AccountInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfoModel.m; sourceTree = "<group>"; };
+		FB48C8871F417F1800E294D3 /* TableViewMoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewMoveViewController.h; sourceTree = "<group>"; };
+		FB48C8881F417F1800E294D3 /* TableViewMoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewMoveViewController.m; sourceTree = "<group>"; };
 		FB72766C1E67E917001E054E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FB72766D1E67F0DF001E054E /* BlocksKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitViewController.h; sourceTree = "<group>"; };
 		FB72766E1E67F0DF001E054E /* BlocksKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitViewController.m; sourceTree = "<group>"; };
@@ -2208,6 +2211,8 @@
 				FB3266FF1EE529A900857482 /* AccountManager.m */,
 				FB3267011EE529CF00857482 /* AccountInfoModel.h */,
 				FB3267021EE529CF00857482 /* AccountInfoModel.m */,
+				FB48C8871F417F1800E294D3 /* TableViewMoveViewController.h */,
+				FB48C8881F417F1800E294D3 /* TableViewMoveViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -2463,6 +2468,7 @@
 				FB73EF251E88EB630046DF35 /* NSUserDefaults+TFEasyCoder.m in Sources */,
 				FB73EF831E88EB640046DF35 /* UILabel+TFEasyCoder.m in Sources */,
 				FB73EEAD1E88EB630046DF35 /* NSExtensionContext+TFEasyCoder.m in Sources */,
+				FB48C8891F417F1800E294D3 /* TableViewMoveViewController.m in Sources */,
 				FB73EEC51E88EB630046DF35 /* NSLayoutAnchor+TFEasyCoder.m in Sources */,
 				FB73EFB91E88EB640046DF35 /* UISearchContainerViewController+TFEasyCoder.m in Sources */,
 				FB73EE951E88EB630046DF35 /* NSCoder+TFEasyCoder.m in Sources */,
